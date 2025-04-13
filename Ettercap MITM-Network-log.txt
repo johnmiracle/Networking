@@ -1,6 +1,4 @@
-MITM attack Simulation
-
-Tool 1: Ettercap
+MITM attack Ettercap Simulation
 
 Listening on:
   eth0 -> 08:00:27:6E:13:6E
@@ -32,7 +30,3 @@ HTTP : 44.228.249.3:80 -> USER: test  PASS: test  INFO: http://testphp.vulnweb.c
 CONTENT: uname=test&pass=test
 
 DHCP: [C4:17:FE:11:62:87] REQUEST 192.168.209.211
-
-
-Tool 2: Wireshark
-
