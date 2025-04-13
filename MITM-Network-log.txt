@@ -1,0 +1,38 @@
+MITM attack Simulation
+
+Tool 1: Ettercap
+
+Listening on:
+  eth0 -> 08:00:27:6E:13:6E
+	  192.168.209.30/255.255.255.0
+	  fe80::aed3:403d:35cc:b056/64
+
+SSL dissection needs a valid 'redir_command_on' script in the etter.conf file
+Privileges dropped to EUID 65534 EGID 65534...
+
+  34 plugins
+  42 protocol dissectors
+  57 ports monitored
+28230 mac vendor fingerprint
+1766 tcp OS fingerprint
+2182 known services
+Lua: no scripts were specified, not starting up!
+Starting Unified sniffing...
+
+Host 192.168.209.211 added to TARGET1
+Host fe80::ffc9:ecd7:426b:de07 added to TARGET2
+
+ARP poisoning victims:
+
+ GROUP 1 : 192.168.209.211 C4:17:FE:11:62:87
+
+ GROUP 2 : ANY (all the hosts in the list)
+DHCP: [C4:17:FE:11:62:87] REQUEST 192.168.209.211
+HTTP : 44.228.249.3:80 -> USER: test  PASS: test  INFO: http://testphp.vulnweb.com/login.php
+CONTENT: uname=test&pass=test
+
+DHCP: [C4:17:FE:11:62:87] REQUEST 192.168.209.211
+
+
+Tool 2: Wireshark
+

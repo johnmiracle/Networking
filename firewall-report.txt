@@ -1,0 +1,26 @@
+# Check status of ufw to ensure firewall is active
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+80/tcp                     ALLOW IN    Anywhere                  
+22/tcp                     ALLOW IN    Anywhere                  
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+22/tcp (v6)                ALLOW IN    Anywhere (v6)    
+
+
+# Checking if firewall accept incoming on port 80 
+$ curl -I http://localhost   
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.12.9
+Date: Fri, 11 Apr 2025 16:27:44 GMT
+Content-type: text/html; charset=utf-8
+Content-Length: 3090
+
+#Check if firewall accept incoming on port 443
+└─$ nc -zv localhost 443    
+localhost [127.0.0.1] 443 (https) : Connection refused
+
